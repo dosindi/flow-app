@@ -5,7 +5,7 @@
 
 ## Database
 
-``sql
+```sql
 USE DATABASE flow_db;
 -- ============================================
 -- Process Flow Database Schema
@@ -215,12 +215,12 @@ ORDER BY nc.parent_id, nc.sequence_order;
 -- LEFT JOIN node_texts nt ON n.id = nt.node_id
 -- ORDER BY n.id, nt.sequence_order;
 
-``
+```
 
 ### Maven plugin 
 add dependency for the generator plugin:
 
-``xml
+```xml
 <plugin>
     <groupId>org.openapitools</groupId>
     <artifactId>openapi-generator-maven-plugin</artifactId>
@@ -247,7 +247,7 @@ add dependency for the generator plugin:
         </execution>
     </executions>
 </plugin>
-``
+```
 
 As we can see, we passed in the YAML file as inputSpec. After that, since we needed a Spring-based server, we used the generatorName as spring.
 
@@ -292,5 +292,6 @@ mvn clean install
 ### Run
 
 Open in browser:
+
 Swagger UI: http://localhost:8080/swagger-ui.html
 OpenAPI JSON: http://localhost:8080/v3/api-docs
